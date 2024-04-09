@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grade score</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="continer">
+            <h1>Check your mark</h1>
+            <input id="number" type="number">
+            <button id="btn" onclick="toggle()">submit</button>
+            <h2 id="text"> </h2>
+        </div>
+    </div>
+
+
+    <script>
+        const input = document.querySelector('#number');
+        const button = document.querySelector('#btn');
+        const text = document.querySelector('#text');
+
+        function toggle() {
+            const number = parseInt(input.value);
+            if (number > 80) {
+                text.innerHTML = 'Grade A';
+            } else if (number > 70) {
+                text.innerHTML = 'Grade B';
+            } else if (number > 60) {
+                text.innerHTML = 'Grade C'
+            } else if (number > 50) {
+                text.innerHTML = 'Grade D'
+            } else {
+                text.innerHTML = 'Grade E'
+            }
+        }
+
+    </script>
+</body>
+
+</html>
